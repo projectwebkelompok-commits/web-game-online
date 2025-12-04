@@ -1,0 +1,152 @@
+/* style.css */
+
+/* === BACKGROUND LIGHTING NEON (FINAL OVERRIDE) === */
+html, body {
+    background-color: #1a0033 !important; 
+    background: linear-gradient(135deg, #0d001f 0%, #1a0033 25%, #2d0052 50%, #1a0033 75%, #0d001f 100%) !important;
+    background-attachment: fixed;
+    color: #ffffff !important;
+}
+
+/* KODE INI SANGAT PENTING: Paksa semua elemen default Bootstrap transparan */
+section, header, main, footer,
+.container, .row, .col,
+.bg-light, .bg-white, .bg-gradient-secondary, .bg-body, 
+.navbar, .navbar-nav, .navbar * {
+    background: transparent !important;
+}
+
+/* Hapus efek neon di teks agar teks terlihat putih standar */
+h1, h2, h3, p, .neon-text {
+    color: #ffffff !important;
+    text-shadow: none !important; 
+}
+
+/* Override background semua elemen Bootstrap */
+section, header, main, footer,
+.container, .row, .col,
+.bg-light, .bg-white, .bg-gradient-secondary, .bg-body {
+    background: transparent !important;
+}
+
+/* Neon Section (biar ga ada putih lagi) */
+#home, #coming-soon, #about {
+    background: transparent !important;
+    color: #ffffff !important;
+}
+
+/* === NEON TEXT & GLOW === */
+h1, h2, h3, .neon-text {
+    color: #ffffff !important;
+    text-shadow: none !important;
+}
+
+p, .lead {
+    color: #ffffff !important;
+    text-shadow: none !important;
+}
+
+/* Teks di card tetap hitam */
+.card-text, .card p, .card h5, .card h6, .card-title {
+    color: #1a1a1a !important;
+    text-shadow: none !important;
+}
+
+/* === NAVBAR STYLE (Match Footer) === */
+.navbar {
+    background-color: #2a2a2c !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: #ffffff !important;
+    text-shadow: none !important;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+    font-size: 14px;
+    font-weight: 500;   
+    transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #00eaff !important;
+    text-shadow: 0 0 8px #00eaff !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Container faded biar tidak putih */
+.container {
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+}
+
+/* === GAMBAR FULLSCREEN HEADER === */
+.fullscreen-img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* === ANIMASI === */
+.animate-fade-in {
+    animation: fadeIn 1.4s ease-in-out;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(24px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-left {
+    animation: slideLeft 1.4s ease-in-out;
+}
+@keyframes slideLeft {
+    0% { opacity: 0; transform: translateX(-60px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+.animate-slide-right {
+    animation: slideRight 1.4s ease-in-out;
+}
+@keyframes slideRight {
+    0% { opacity: 0; transform: translateX(60px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* === KARTU KOMING SOON === */
+#coming-soon .card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    transform-origin: center;
+    box-shadow: 0 0 12px rgba(0, 234, 255, 0.3);
+}
+#coming-soon .card:hover {
+    transform: translateY(-8px) scale(1.06);
+    box-shadow: 0 0 18px rgba(0, 234, 255, 0.7);
+}
+#coming-soon .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* === BUTTON NEON === */
+.btn-primary {
+    background: linear-gradient(135deg, #00eaff 0%, #004cff 100%);
+    border: none;
+    box-shadow: 0 0 10px #00eaff;
+}
+.btn-primary:hover {
+    background: linear-gradient(135deg, #004cff 0%, #00eaff 100%);
+    box-shadow: 0 0 18px #00eaff;
+}
